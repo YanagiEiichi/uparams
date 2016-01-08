@@ -1,0 +1,23 @@
+{
+  "name": "uparams",
+  "version": "1.0.0",
+  "description": "url params parser",
+  "main": "uparams.js",
+  "authors": [
+    "YanagiEiichi <admin@web-tinker.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "url",
+    "params"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

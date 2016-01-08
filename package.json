@@ -1,0 +1,15 @@
+{
+  "name": "uparams",
+  "version": "1.0.0",
+  "description": "url params parser",
+  "main": "uparams.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "url",
+    "params"
+  ],
+  "author": "YanagiEiichi <admin@web-tinker.com>",
+  "license": "MIT"
+}
