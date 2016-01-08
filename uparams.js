@@ -3,15 +3,16 @@
 var UParams = function(target) {
   if(!(this instanceof UParams)) return new UParams(target);
   if (!target) target = location.search + location.hash;
+  var that = this;
   switch (typeof target) {
     case 'object':
       for (var i in target) {
-        if (!UParams.isSpecialKey(i)) this[i] = target[i] + '';
+        if (!UParams.isSpecialKey(i)) that[i] = target[i] + '';
       }
       break;
     case 'string':
       target.replace(/([^=?#&]*)=([^?#&]*)/g, function(e, $1, $2) {
-        if (!UParams.isSpecialKey($1)) this[decodeURIComponent($1)] = decodeURIComponent($2);
+        if (!UParams.isSpecialKey($1)) that[decodeURIComponent($1)] = decodeURIComponent($2);
       });
   }
 };
@@ -23,8 +24,9 @@ Object.defineProperty(UParams.prototype, 'toString', {
   configurable: true,
   writable: true,
   value: function() {
-    return location.origin + location.pathname + '#' + Object.keys(this).map(function(key) {
-      return encodeURIComponent(key) + '=' + encodeURIComponent(this[key]);
+    var that = this;
+    return location.origin + location.pathname + '#' + Object.keys(that).map(function(key) {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(that[key]);
     }).join('&');
   }
 });
