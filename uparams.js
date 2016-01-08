@@ -10,7 +10,7 @@ var UParams = function(target) {
       }
       break;
     case 'string':
-      target.replace(/([^=?#&]*)=([^?#&]*)/g, (e, $1, $2) => {
+      target.replace(/([^=?#&]*)=([^?#&]*)/g, function(e, $1, $2) {
         if (!UParams.isSpecialKey($1)) this[decodeURIComponent($1)] = decodeURIComponent($2);
       });
   }
@@ -23,7 +23,7 @@ Object.defineProperty(UParams.prototype, 'toString', {
   configurable: true,
   writable: true,
   value: function() {
-    return location.origin + location.pathname + '#' + Object.keys(this).map(key => {
+    return location.origin + location.pathname + '#' + Object.keys(this).map(function(key) {
       return encodeURIComponent(key) + '=' + encodeURIComponent(this[key]);
     }).join('&');
   }
