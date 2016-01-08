@@ -1,9 +1,11 @@
+'use strict';
+
 var UParams = function(target) {
   if(!(this instanceof UParams)) return new UParams(target);
   if (!target) target = location.search + location.hash;
   switch (typeof target) {
     case 'object':
-      for (let i in target) {
+      for (var i in target) {
         if (!UParams.isSpecialKey(i)) this[i] = target[i] + '';
       }
       break;
