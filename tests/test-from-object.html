@@ -1,0 +1,15 @@
+<script src="bower_components/tester/tester.js"></script>
+<script src="../uparams.js"></script>
+<script>
+var params = new UParams({
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+});
+Tester.assert(params.a === '1', 'a must be 1');
+Tester.assert(params.b === '2', 'b must be 2');
+Tester.assert(params.c === '3', 'c must be 3');
+Tester.assert(params.d === '4', 'd must be 4');
+Tester.feedback(true);
+</script>

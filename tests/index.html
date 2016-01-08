@@ -1,0 +1,14 @@
+<script src="bower_components/tester/tester.js"></script>
+<script>
+Tester.run([
+  'test-basic.html',
+  'test-from-object.html',
+  'test-from-url.html?a=1&c=3#b=2&d=4',
+  'test-from-url.html#a=1&c=3?b=2&d=4',
+  'test-from-url.html#a=1#c=3#b=2#d=4',
+  'test-from-url.html?a=1?c=3?b=2?d=4',
+  'test-tostring.html',
+  'test-unsafe-keys.html',
+]);
+</script>
+

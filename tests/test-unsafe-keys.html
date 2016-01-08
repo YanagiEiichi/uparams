@@ -1,0 +1,7 @@
+<script src="bower_components/tester/tester.js"></script>
+<script src="../uparams.js"></script>
+<script>
+Tester.assert(new UParams('?toString=1').toString === UParams.prototype.toString, 'toString error');
+Tester.assert(new UParams('?valueOf=1').valueOf === UParams.prototype.valueOf, 'valueOf error');
+Tester.feedback(true);
+</script>
