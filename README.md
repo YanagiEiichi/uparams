@@ -18,3 +18,21 @@ params.d === '4';
 // Convert to current URL with params (NOTE: use hash style)
 params.toString() === document.origin + location.path + '#a=1&b=2&c=3&d=4';
 ```
+
+You can load UParams with UMD
+
+```
+require(['UParams'], UParams => {
+  // DO SOMETHING
+});
+```
+
+#### Run Testing Case
+
+```bash
+cd tests
+bower install
+cd ..
+python -m SimpleHTTPServer &
+open http://127.0.0.1:8000/tests
+```
