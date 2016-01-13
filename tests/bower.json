@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "tester": "~0.0.13"
+    "tester": "~0.0.13",
+    "requirejs": "~2.1.22"
   }
 }
