@@ -1,13 +1,13 @@
 {
   "name": "uparams",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "url params parser",
   "main": "uparams.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "prepublish": "amd2umd src/uparams.js > uparams.js"
+    "prepublish": "make build"
   },
   "keywords": [
     "url",
@@ -16,6 +16,7 @@
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
-    "amd2umd": "0.0.3"
+    "amd2umd": "~0.0.3",
+    "uglifyjs": "^2.4.10"
   }
 }
