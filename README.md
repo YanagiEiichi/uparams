@@ -15,8 +15,8 @@ params.b === '2';
 params.c === '3';
 params.d === '4';
 
-// Convert to current URL with params (NOTE: use hash style)
-params.toString() === document.origin + location.path + '#a=1&b=2&c=3&d=4';
+// Convert to a QueryString
+params.toString() === 'a=1&b=2&c=3&d=4';
 ```
 
 You can load UParams with UMD
