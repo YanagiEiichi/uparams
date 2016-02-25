@@ -33,8 +33,8 @@ define('UParams', function() {
     writable: true,
     value: function() {
       var that = this;
-      // Join to a complete hash URL
-      return location.origin + location.pathname + '#' + Object.keys(that).map(function(key) {
+      // Join to a http query string
+      return Object.keys(that).map(function(key) {
         return encodeURIComponent(key) + '=' + encodeURIComponent(that[key]);
       }).join('&');
     }
