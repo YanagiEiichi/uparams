@@ -2,6 +2,10 @@
 
 define('UParams', function() {
 
+  // To check special keys
+  var isSpecialKey = RegExp.prototype.test.bind(/^(?:toString|valueOf)$/);
+
+  // Main Constructor
   var UParams = function(target) {
     // Auto new
     if (!(this instanceof UParams)) return new UParams(target);
@@ -12,19 +16,16 @@ define('UParams', function() {
       case 'object':
         // Copy properties from target
         for (var i in target) {
-          if (!UParams.isSpecialKey(i)) that[i] = target[i] + '';
+          if (!isSpecialKey(i)) that[i] = target[i] + '';
         }
         break;
       case 'string':
         // Match parameters
         target.replace(/([^=?#&]*)=([^?#&]*)/g, function(e, $1, $2) {
-          if (!UParams.isSpecialKey($1)) that[decodeURIComponent($1)] = decodeURIComponent($2);
+          if (!isSpecialKey($1)) that[decodeURIComponent($1)] = decodeURIComponent($2);
         });
     }
   };
-
-  // To check special keys
-  UParams.isSpecialKey = RegExp.prototype.test.bind(/^(?:toString|valueOf)$/);
 
   // Define the hidden toString method
   Object.defineProperty(UParams.prototype, 'toString', {
