@@ -4,7 +4,7 @@ define('UParams', function() {
 
   var UParams = function(target) {
     // Auto new
-    if(!(this instanceof UParams)) return new UParams(target);
+    if (!(this instanceof UParams)) return new UParams(target);
     // Default parameter
     if (!target) target = location.search + location.hash;
     var that = this;
