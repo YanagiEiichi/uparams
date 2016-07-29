@@ -1,6 +1,6 @@
 {
   "name": "uparams",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "url params parser",
   "main": "uparams.js",
   "directories": {
@@ -16,7 +16,7 @@
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
-    "amd2umd": "~0.0.3",
+    "amd2umd": "~0.0.4",
     "uglifyjs": "^2.4.10"
   }
 }
