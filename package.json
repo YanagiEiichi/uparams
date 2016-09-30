@@ -1,22 +1,19 @@
 {
-  "name": "uparams",
-  "version": "1.3.0",
-  "description": "url params parser",
-  "main": "uparams.js",
-  "directories": {
-    "test": "tests"
-  },
+  "name": "UParams",
+  "version": "1.4.0",
+  "description": "A URL PARAMETERS PROCESSOR",
+  "main": "UParams.js",
   "scripts": {
-    "prepublish": "make build"
+    "prepublish": "amd2umd src/UParams.js > UParams.js && uglifyjs UParams.js --source-map UParams.map --output UParams.min.js -m",
+    "test": "ui-tester-start"
   },
-  "keywords": [
-    "url",
-    "params"
-  ],
+  "keywords": [ "url", "params" ],
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
-    "amd2umd": "~0.0.3",
-    "uglifyjs": "^2.4.10"
+    "amd2umd": "~0.0.5",
+    "uglifyjs": "^2.4.10",
+    "ui-tester": "^1.0.0",
+    "requirejs": "~2.1.22"
   }
 }

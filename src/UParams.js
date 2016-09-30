@@ -10,7 +10,7 @@ define('UParams', function() {
     // Auto new
     if (!(this instanceof UParams)) return new UParams(target);
     // Default parameter
-    if (!target) target = location.search + location.hash;
+    if (!target) target = location.search + location.hash.replace(/^#!/, '#');
     var that = this;
     switch (typeof target) {
       case 'object':

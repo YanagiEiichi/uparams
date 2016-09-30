@@ -45,11 +45,7 @@
         "no-unused-vars": [ 0 ]
     },
     "env": {
-        "es6": true,
         "browser": true
-    },
-    "globals": {
-        "$": true
     },
     "extends": "eslint:recommended"
 }
