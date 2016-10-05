@@ -1,0 +1,12 @@
+<script src="/tester.js"></script>
+<script src="/uparams.js"></script>
+<script>
+addEventListener('hashchange', function() {
+  Tester.log(location.href);
+  var params = new UParams();
+  Tester.assert(params.a === '1', 'a must be 1');
+  Tester.assert(params.b === '2', 'b must be 2');
+  Tester.feedback(true);
+});
+location.hash = '#!a=1&b=2';
+</script>

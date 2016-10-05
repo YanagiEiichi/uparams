@@ -5,15 +5,18 @@
   "main": "UParams.js",
   "scripts": {
     "prepublish": "amd2umd src/UParams.js > UParams.js && uglifyjs UParams.js --source-map UParams.map --output UParams.min.js -m",
-    "test": "ui-tester-start"
+    "test": "ui-tester-start tests"
   },
-  "keywords": [ "url", "params" ],
+  "keywords": [
+    "url",
+    "params"
+  ],
   "author": "YanagiEiichi <admin@web-tinker.com>",
   "license": "MIT",
   "devDependencies": {
     "amd2umd": "~0.0.5",
+    "requirejs": "~2.1.22",
     "uglifyjs": "^2.4.10",
-    "ui-tester": "^1.0.0",
-    "requirejs": "~2.1.22"
+    "ui-tester": "^1.1.2"
   }
 }

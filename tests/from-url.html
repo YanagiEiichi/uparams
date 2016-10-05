@@ -1,0 +1,16 @@
+<script src="/tester.js"></script>
+<script src="/uparams.js"></script>
+<script>
+history.replaceState(null, null, '?a=1&c=3');
+Tester.log(location.href);
+addEventListener('hashchange', function() {
+  Tester.log(location.href);
+  var params = new UParams();
+  Tester.assert(params.a === '1', 'a must be 1');
+  Tester.assert(params.b === '2', 'b must be 2');
+  Tester.assert(params.c === '3', 'c must be 3');
+  Tester.assert(params.d === '4', 'd must be 4');
+  Tester.feedback(true);
+});
+location.hash = '#b=2&d=4';
+</script>
